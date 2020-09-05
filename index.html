@@ -1,7 +1,100 @@
+
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Seed Savior-Iteration | mnemonic-recovery</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Seed Savior-Iteration" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bitcoin and Ethereum mnemonic phrase recovery tool" />
+<meta property="og:description" content="Bitcoin and Ethereum mnemonic phrase recovery tool" />
+<link rel="canonical" href="https://noname1007.github.io/mnemonic-recovery/" />
+<meta property="og:url" content="https://noname1007.github.io/mnemonic-recovery/" />
+<meta property="og:site_name" content="mnemonic-recovery" />
+<script type="application/ld+json">
+{"@type":"WebSite","url":"https://noname1007.github.io/mnemonic-recovery/","name":"mnemonic-recovery","headline":"Seed Savior-Iteration","description":"Bitcoin and Ethereum mnemonic phrase recovery tool","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/mnemonic-recovery/assets/css/style.css?v=8e81f45fbe0e305bb59f5adb9114e06f4b59af1b">
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="https://noname1007.github.io/mnemonic-recovery/">mnemonic-recovery</a></h1>
+      
+
+      <h1 id="seed-savior-iteration">Seed Savior-Iteration</h1>
+
+<p>A fork of tool for recovering BIP39 seed phrases.</p>
+
+<p>Getting any of the following errors…</p>
+
+<p>Trezor: Recovery failed. Error details: Mnemonic is not valid
+<br />Ledger: Invalid recovery phrase
+<br />Invalid mnemonic…</p>
+
+<p>Any of the above errors can really ruin your day, especially if you have lost/damanged/reset your hardware wallet. The aim of this tool is to be a 1st (and hopefully only) step required to recover your 24 word seed. It is quick and easy to understand and will work on any system with nothing more than a browser. If you don’t have success with this tool, then you can try BTCRecover, (https://github.com/gurnec/btcrecover) though it hasn’t been updated in some time.</p>
+
+<p>The tool is based on the bip39 project by Ian Coleman https://github.com/iancoleman/bip39 and is a minimally modifed version of the Seed Savior Tool found here: https://github.com/KZen-networks/mnemonic-recovery It’s possible the changes I added will be merged into the main project, but I have forked it in the mean time while I add some interface tweaks to make it a bit more n00b friendly, useful for more coins as-is and with examples of extra coins that are easy to extend as required. I can also look at adding the 1st public address for other coins to the UI as long as they are already included in the bitcoinjs library, though you will notice that all the extra address generation makes this tool take far longer to test addresses than the original seed-savior. (Though still quick enough to be useful in my opinion)</p>
+
+<p>For more context and background of the original tool, please see the blog post https://medium.com/kzen-networks/the-wallet-seed-saviors-2cad8ae542f3</p>
+
+
+<h2 id="online-version">Online Version</h2>
+
+<p>https://noname1007.github.io/mnemonic-recovery/src/index.html</p>
+
+<h2 id="standalone-offline-version">Standalone offline version</h2>
+
+<p>Download <code class="highlighter-rouge">mnemonic-standalone.html</code></p>
+
+<p>Open the file in a browser by double clicking it.</p>
+
+<p>This can be compiled from source using the command <code class="highlighter-rouge">python compile.py</code></p>
+
+<h2 id="usage">Usage</h2>
+
+<p>Enter your seed phrase into the ‘BIP39 Phrase’ field. If a word is missing or unknown, please type “?” instead and the tool will find all relevant options. If a word is wrong, the tool will try to suggest the closest option.</p>
+
+<p>The tool will suggest all relevant options for the missing word and the derived public addresses for Bitcoin anmd Ethereum. To find out if one of the suggested addresses is actually the right one, you can click on the suggested address  tocheck the address’ transaction history on a block explorer.</p>
+
+<h2 id="demo">Demo</h2>
+
+<p>In this demo we enter “phrase brief ceiling dream rack install fault insane panic surround glory ? library brother hill sauce access child notice picnic dinner panda purity poem”</p>
+
+<p>The tool suggests several options for the missing word and the relevant one will be “asset”. We can verify that by clicking on the link of the dervied Ethereum address (“0x2dfF20b40504f99c6314ac30e8DF5c02dd8058e7” listed in the “BIP44 ETH Address” column) and checking the address has transaction history.</p>
+
+<p><img src="/src/img/seed%20demo%20annotated.gif" alt="Demo" title="Demo" /></p>
+
+<h2 id="making-changes">Making changes</h2>
+
+<p>Please do not make modifications to <code class="highlighter-rouge">mnemonic-standalone.html</code>, since they will
+be overwritten by <code class="highlighter-rouge">compile.py</code>.</p>
+
+<p>Make changes in <code class="highlighter-rouge">src/*</code>.</p>
+
+<p>Changes are applied during release using the command <code class="highlighter-rouge">python compile.py</code>, so
+please do not commit changes to <code class="highlighter-rouge">mnemonic.html</code></p>
+
+<h1 id="license">License</h1>
+
+<p>This Seed Svior tool is released under the terms of the MIT license. See LICENSE for
+more information or see https://opensource.org/licenses/MIT.</p>
+
+
+      
+      <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
+        This site is open source. <a href="https://github.com/noname1007/mnemonic-recovery/edit/master/README.md">Improve this page</a>.
+      </div>
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+    
+  </body>
 </html>
